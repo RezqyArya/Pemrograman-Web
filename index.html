@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara Kerja Internet</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+<body>
+<header>
+    <h1>Internet</h1>
+    <nav>
+        <ul>
+            <li><a href="#umum">Umum</a></li>
+            <li><a href="#http">HTTP & HTTPS</a></li>
+            <li><a href="#domain">Nama Domain</a></li>
+            <li><a href="#hosting">Hosting</a></li>
+            <li><a href="#dns">DNS</a></li>
+            <li><a href="#browser">Browser</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="umum">
+    <h2>1. Cara Kerja Internet Secara Umum</h2>
+    <img src="img/cara kerja internet.png" alt="cara kerja internet secara umum" width="400">
+
+    <p>
+        Prinsip kerja Internet adalah mentransmisikan berbagai data dan informasi kepada komputer yang saling terhubung. Proses transmisi tersebut bekerja menggunakan protokol TCP dan alamat IP. 
+        Sebelum dapat menikmati layanan internet, Anda harus membeli paket internet terlebih dahulu di perusahaan ISP (Internet Service Provider).
+        Perusahaan ISP inilah yang akan memberikan alamat IP di perangkat yang Anda gunakan dan dapat terhubung dengan server ISP selaku penyedia layanan.
+        Dua protokol tersebut bekerja bersamaan supaya transmisi data di Internet berjalan konsisten, terlepas dari perangkat yang digunakan untuk mengakses Internet.
+    </p>
+    <p>
+        Data dikirim dalam bentuk pesan dan paket ketika melalui proses transmisi di Internet. Sebelum proses transmisi, data terbagi menjadi beberapa bagian kecil yang disebut paket (packets).
+        Paket-paket tersebut terkumpul menjadi satu bentuk yang disebut pesan (message) untuk dikirimkan melalui Internet. Paket dan pesan tersebut berpindah dari satu komputer dan lainnya menggunakan TCP/IP.
+        TCP dan IP address merupakan dua protokol yang berbeda tetapi saling bekerja sama dalam proses transmisi data. Tujuannya adalah memastikan tidak ada paket yang hilang ketika membentuk pesan.
+        Protokol tersebut juga bertugas untuk memastikan seluruh paketnya disusun dalam urutan yang tepat serta tidak ada keterlambatan dalam transmisi data sehingga memengaruhi kualitasnya.
+    </p>
+
+    <p>
+        Kesimpulannya, Internet bekerja dengan menghubungkan miliaran perangkat di seluruh dunia dengan protokol TCP/IP.
+        Kehadiran Internet membuat proses transmisi data berjalan lancar dan tidak terhambat, serta diterima dalam keadaan utuh.
+    </p>
+    
+    <p><b>Sumber:</b> 
+        <a href=https://www.cloudeka.id/id/berita/tips-trik/cara-kerja-internet/ target="_blank">
+            Cloudeka - Cara Kerja Internet</a>
+    </p>
+</section>
+
+<section id="http">
+    <h2>2. HTTP dan HTTPS</h2>
+    <p>
+        <b>Hypertext transfer protocol (HTTP)</b> adalah sebuah protokol atau seperangkat aturan komunikasi untuk komunikasi klien-server. Saat Anda mengunjungi situs web, peramban Anda mengirimkan permintaan HTTP ke server web, yang merespons dengan respons HTTP.
+        <b>hypertext transfer protocol secure (HTTPS)</b> adalah versi atau perpanjangan HTTP yang lebih aman. Di HTTPS, peramban dan server akan membuat koneksi yang aman dan terenkripsi sebelum mentransfer data.
+    </p>
+
+    <img src="img/https-https.png" alt="HTTP vs HTTPS" width="400">
+
+    <h3>Cara Kerja HTTP</h3>
+    <p>HTTP adalah protokol lapisan aplikasi dalam model komunikasi jaringan Interkoneksi Sistem Terbuka (OSI).
+       Protokol ini menentukan beberapa jenis permintaan dan respons. Misalnya, ketika Anda ingin melihat beberapa data dari situs web, Anda mengirim permintaan HTTP GET. 
+       Jika Anda ingin mengirim beberapa informasi, seperti mengisi formulir kontak, Anda mengirim permintaan HTTP PUT.</p>
+    
+    <p>Demikian pula, server mengirimkan berbagai jenis respons HTTP dalam bentuk kode angka dan data. Berikut beberapa contohnya:</p>   
+    <ol>
+        <li>200 - OK</li>
+        <li>400 - Bad request</li>
+        <li>404 - Resource not found</li>
+    </ol>
+
+    <h4>Cara Kerja HTTPS</h4>
+    <p>HTTP mengirimkan data yang tidak terenkripsi, yang berarti bahwa informasi yang dikirim dari peramban dapat disadap dan dibaca oleh pihak ketiga. 
+       Hal ini bukanlah proses yang ideal, jadi proses tersebut diperpanjang ke HTTPS untuk menambahkan lapisan keamanan lain untuk komunikasi.
+       HTTPS menggabungkan permintaan dan respons HTTP dengan teknologi SSL dan TLS.</p>
+
+    <p>Situs web HTTPS harus mendapatkan sertifikat SSL/TLS dari otoritas sertifikat (CA) independen.
+       Situs web ini berbagi sertifikat dengan peramban sebelum bertukar data untuk membangun kepercayaan.
+       Sertifikat SSL juga berisi informasi kriptografi sehingga peramban server dan web dapat bertukar data terenkripsi atau acak. Prosesnya berlangsung seperti ini:</p>
+       
+    <ol>
+        <li>Anda mengunjungi situs web HTTPS dengan mengetikkan format URL https:// di bilah alamat peramban Anda.</li>
+        <li>Peramban mencoba untuk memverifikasi keaslian situs dengan meminta sertifikat SSL server.</li>
+        <li>Server mengirimkan sertifikat SSL yang berisi kunci publik sebagai balasan.</li>
+        <li>Sertifikat SSL situs web membuktikan identitas server. Setelah peramban puas dengan bukti tersebut, peramban menggunakan kunci publik untuk mengenkripsi dan mengirim pesan yang berisi kunci sesi rahasia.</li>
+        <li>Server web menggunakan kunci privat untuk mendekripsi pesan dan mengambil kunci sesi. Kemudian, server web mengenkripsi kunci sesi dan mengirim pesan pernyataan ke peramban.</li>
+        <li>Peramban dan server web kini beralih menggunakan kunci sesi yang sama untuk bertukar pesan dengan aman.</li>
+    </ol>
+
+    <p><b>Sumber:</b> 
+        <a href="https://aws.amazon.com/id/compare/the-difference-between-https-and-http/" target="_blank">AWS - The Difference Between HTTPS and HTTP</a>
+    </p>
+</section>
+
+<section id="domain">
+    <h2>3. Nama Domain</h2>
+    <p>Singkatnya, nama domain adalah alamat yang perlu Anda gunakan untuk membuka dan mengakses website.</p>
+    <p>Perumpamaannya seperti ini: website yang Anda miliki adalah sebuah rumah. Nah, layanan web hosting adalah tanah tempat Anda mendirikan rumah, sedangkan domain adalah alamat yang bisa digunakan orang-orang untuk menuju ke rumah Anda.</p>
+    <p>Jadi, bisa dibilang bahwa domain adalah salah satu komponen utama website. Nama domain terdiri dari dua elemen utama, yaitu nama situs dan ekstensi. Contohnya, <b>Facebook.com</b> memuat nama situs (Facebook) dan ekstensi (.com).</p>
+    <p>Registrasi nama domain dikelola oleh organisasi bernama <b>ICANN (Internet Corporation for Assigned Names and Numbers)</b>. ICANN menentukan ekstensi yang tersedia dan memiliki database terpusat yang berisi informasi pengarahan nama domain.</p>
+
+    <img src="img/domain.png" alt="nama domain">
+
+    <p><b>Sumber:</b> 
+        <a href="https://www.hostinger.com/id/tutorial/apa-itu-domain" target="_blank">Hostinger - Apa Itu Domain?</a>
+    </p>
+</section>
+
+<section id="hosting">
+    <h2>4. Hosting</h2>
+    <p>
+        Hosting adalah sebuah layanan yang menyediakan dalam sebuah server untuk menyimpan file serta data website seperti file html, php, css dan gambar yang dapat memungkinkan sebuah website bisa diakses melalui internet.
+        Fungsi hosting adalah sebagai rumah dari sebuah website agar dapat diakses secara online melalui internet. Tanpa adanya hosting, website tidak akan dapat diakses oleh penggunjung.
+        Oleh karena itu, hosting memungkinkan sebuah website dapat diakses dari berbagai perangkat, seperti komputer, laptop, tablet, dan smartphone.
+    </p>
+
+    <img src="img/hosting.png" alt="Hosting">
+
+    <h3>Cara Kerja</h3>
+    <ol>
+        <li><b>Website disimpan di Server Hosting:</b> File website seperti gambar, video, script, database dan konten lainnya akan disimpan di server hosting</li>
+        <li><b>Pengunjung Akses Website:</b> Pengunjung akan mengetikan alamat domain di browser, nah dari permintaan tersebut akan dikirimkan ke server hosting</li>
+        <li><b>Permintaan dikirimkan Ke Server Hosting:</b> Permintaan dari pengunjung akan dikirim ke server hosting yang akan memproses permintaan</li>
+        <li><b>Server Hosting Mengirimkan File Ke Browser:</b> Setelah permintaanya diterima, server hosting akan mengirimkan file yang diminta seperti file HTML, gambar, atau konten lainnya ke browser pengunjung tadi</li>
+        <li><b>Pengunjung Dapat Mengakses Website:</b> Setelah browser menerima file website dari server hosting, pengunjung dapat mengakses website dengan melihat halaman web yang terbentuk di browser.</li>
+    </ol>
+
+    <p><b>Sumber:</b> 
+        <a href="https://herza.id/blog/apa-itu-hosting-cara-kerja-jenis-jenisnya/" target="_blank">Herza - Apa Itu Hosting?</a>
+    </p>
+</section>
+
+<section id="dns">
+    <h2>5. DNS (Domain Name System)</h2>
+    <p>
+         DNS singkatan dari Domain Name System Server. <b>DNS</b> adalah komponen dalam infrastruktur jaringan yang bertugas untuk menerjemahkan nama domain yang mudah diingat menjadi alamat IP numerik yang unik.
+         DNS Server berperan penting dalam pengalamatan jaringan karena memungkinkan pengguna untuk mengakses situs web, layanan online, dan sumber daya jaringan lainnya dengan menggunakan nama domain alih-alih harus menghafal alamat IP numerik yang panjang.    
+    </p>
+
+    <img src="img/dns.png" alt="DNS" width="400">
+
+    <h3>Cara Kerja</h3>
+    <ol>
+        <li><b>Permintaan DNS:</b> Ketika pengguna memasukkan nama domain di peramban web atau aplikasi, perangkat pengguna akan mengirimkan permintaan DNS ke server DNS terdekat yang dikonfigurasi dalam pengaturan jaringan. Server DNS ini disebut sebagai resolver DNS. </li>
+        <li><b>Pertanyaan ke Resolver DNS:</b> Resolver DNS menerima permintaan DNS dari perangkat pengguna dan memeriksa apakah informasi yang diminta tersedia dalam cache-nya. Jika informasi tersebut ada dalam cache, resolver DNS akan mengembalikan alamat IP yang sesuai tanpa perlu mengirim permintaan ke server DNS lainnya. </li>
+        <li><b>Pertanyaan ke Server DNS Hierarchy:</b> Jika informasi yang diminta tidak ada dalam cache resolver DNS, resolver DNS akan mengirimkan permintaan ke server DNS berikutnya dalam hierarki DNS. Biasanya, ini adalah server DNS yang diatur oleh penyedia layanan internet (ISP) atau server DNS tingkat atas yang disebut sebagai DNS root server. </li>
+        <li><b>Penelusuran DNS:</b> Server DNS yang menerima permintaan DNS akan mencoba menemukan informasi yang diminta dengan melakukan penelusuran (query) melalui hierarki DNS. Proses ini melibatkan serangkaian permintaan dan respons antara server DNS hingga informasi yang diminta ditemukan atau tidak tersedia. </li>
+        <li><b>Respons DNS:</b> Setelah server DNS menemukan informasi yang diminta, server DNS akan mengirimkan respons ke resolver DNS yang awalnya mengirim permintaan DNS. Respons ini berisi alamat IP yang sesuai dengan nama domain yang diminta. </li>
+        <li><b>Pengembalian Alamat IP:</b> Resolver DNS menerima respons DNS dari server DNS dan mengembalikan alamat IP yang sesuai ke perangkat pengguna yang awalnya mengirim permintaan DNS. </li>
+        <li><b>Akses ke Sumber Daya:</b> Perangkat pengguna menggunakan alamat IP yang diterima untuk mengakses sumber daya yang dimaksud, seperti situs web, layanan online, atau sumber daya jaringan lainnya. </li>
+    </ol>
+
+    <p><b>Sumber:</b> 
+        <a href="https://it.telkomuniversity.ac.id/dns-adalah/" target="_blank">IT Telkom University - DNS Adalah</a>
+    </p>
+</section>
+
+<section id="browser">
+    <h2>6. Browser</h2>
+    <p>
+         Browser adalah alat yang digunakan untuk melihat halaman website. Artinya, dengan browser para pengguna dapat mengakses konten dari sebuah website di internet.
+         Browser bekerja dengan proses sederhana, yaitu dengan mengirim request ke server website menggunakan protokol HTTP saat pengguna mengetik alamat domain di address bar lalu menampilkan halaman website yang diminta oleh pengguna berupa format gambar, teks, dan video.
+    </p>
+
+    <img src="img/browser.png" alt="Browser">
+
+    <h3>Cara Kerja</h3>
+    <ol>
+        <li><b>Melakukan Request ke Server:</b> Saat pengguna mengetik alamat website (URL) di address bar, browser akan melakukan melakukan permintaan ke server website yang dituju menggunakan protokol HTTP atau HTTPS.</li>
+        <li><b>Menerima Data Response:</b> Server mengirimkan data halaman website berupa kode HTML, CSS, JavaScript, dan aset image atau video ke browser.</li>
+        <li><b>Menampilkan Halaman:</b> Data yang diterima dari server akan diolah oleh browser dan dikonstruksi untuk menjadi suatu visual tampilan halaman website.</li>
+    </ol>
+
+    <p><b>Sumber:</b> 
+        <a href="https://www.qwords.com/blog/apa-itu-web-browser/" target="_blank">Qwords - Apa Itu Web Browser?</a>
+    </p>
+</section>
+
+</body>
+</html>
